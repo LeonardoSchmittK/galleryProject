@@ -1,7 +1,31 @@
+html{
+   scroll-behavior: smooth;
+}
 body{
  margin: 0;
  padding: 0;
  overflow-x: hidden;
+}
+div#title{
+   float: float;
+   font-size: 60px;
+   font-family: 'Do Hyeon', sans-serif;
+   text-align: center;
+   margin-top: -80px;
+}
+div#title::after{
+   content: '';
+   background-color: rgba(0, 0, 0, 0.425);
+   transition: 1s;
+   width:100px;
+   display: block;
+   height: 8px;
+   margin: auto;
+   margin-top:-110px;
+   position: relative;
+}
+div#title:hover::after{
+   width: 200px;transition: 1s;
 }
 div#increaseImgContainer i#increaseImgIcon{
    font-size: 60px;
@@ -22,17 +46,17 @@ li{
  list-style: none;
 }
 img{
- width: 300px;height: 300px;
+ width: 450px;height: 300px;
  border-top-left-radius: 27px;
  border-bottom-right-radius: 27px;
- transition: 0.4s;
+ transition: 1s;
  box-shadow: 1px 10px 28px rgba(0, 0, 0, 0.514);
  border: 0.1em solid white;
- 
+ z-index: 9999;
 } 
 
 img:hover{
- width: 350px;
+ width: 500px;height:400px ;
  transform: scale(1.1);
  border-radius: 12px;
  transition: 0.4s;
@@ -40,13 +64,40 @@ img:hover{
  cursor: pointer;
  filter: drop-shadow(0 0 160px white);
 }
+img:hover div#lineImg{
+   height: 30px;
+}
+
+div#lineImg{
+   background-color: rgb(255, 255, 255);
+   width: 390px;height: 10px;
+   position: relative;
+   z-index: 0;
+   margin-top: -10px;
+   
+   border-bottom-right-radius: 20%;
+   transition: 1s;
+}
+ i {
+
+   text-align: center;
+   margin-left: 1030px;
+  font-size: 40px;color: rgb(46, 46, 46);
+  width: 45px;
+  border-radius: 100%;
+  transition: 0.2s;
+}
+ i:hover{
+   background-color: rgb(211, 211, 211);
+   transition: 0.5s;
+}
 
 footer{
  text-align: center;
  font-family: sans-serif;
  font-size: 24px;
- color:grey;
+ color:rgba(128, 128, 128, 0.349);
  text-shadow: 20px 0px 0px rgba(218, 218, 218, 0.657);
  
  margin-bottom: 55px;
-}
+} 
